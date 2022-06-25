@@ -1,0 +1,15 @@
+C:\Users\55119\Documents\backend_projeto\bin\Debug\net6.0\backend_projeto.exe
+C:\Users\55119\Documents\backend_projeto\bin\Debug\net6.0\backend_projeto.deps.json
+C:\Users\55119\Documents\backend_projeto\bin\Debug\net6.0\backend_projeto.runtimeconfig.json
+C:\Users\55119\Documents\backend_projeto\bin\Debug\net6.0\backend_projeto.dll
+C:\Users\55119\Documents\backend_projeto\bin\Debug\net6.0\backend_projeto.pdb
+C:\Users\55119\Documents\backend_projeto\obj\Debug\net6.0\backend_projeto.csproj.AssemblyReference.cache
+C:\Users\55119\Documents\backend_projeto\obj\Debug\net6.0\backend_projeto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\55119\Documents\backend_projeto\obj\Debug\net6.0\backend_projeto.AssemblyInfoInputs.cache
+C:\Users\55119\Documents\backend_projeto\obj\Debug\net6.0\backend_projeto.AssemblyInfo.cs
+C:\Users\55119\Documents\backend_projeto\obj\Debug\net6.0\backend_projeto.csproj.CoreCompileInputs.cache
+C:\Users\55119\Documents\backend_projeto\obj\Debug\net6.0\backend_projeto.dll
+C:\Users\55119\Documents\backend_projeto\obj\Debug\net6.0\refint\backend_projeto.dll
+C:\Users\55119\Documents\backend_projeto\obj\Debug\net6.0\backend_projeto.pdb
+C:\Users\55119\Documents\backend_projeto\obj\Debug\net6.0\backend_projeto.genruntimeconfig.cache
+C:\Users\55119\Documents\backend_projeto\obj\Debug\net6.0\ref\backend_projeto.dll
