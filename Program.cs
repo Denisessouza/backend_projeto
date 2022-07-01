@@ -1,4 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-Console.WriteLine("Vai dar certo !!!");
+﻿using backend_projeto;
+
+PessoaFisica novaPf = new PessoaFisica();
+
+novaPf.nome = "Denise";
+
+Console.WriteLine(novaPf.nome);
+Console.WriteLine("Nome: " + novaPf.nome); //Concatenado
+Console.WriteLine($"Nome: {novaPf.nome}");  //Interpolado
+
+
 
