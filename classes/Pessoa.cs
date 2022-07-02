@@ -14,8 +14,6 @@ public abstract class Pessoa : IPessoa
    
    
    
-    public float PagarImposto(float rendimento)
-    {
-        throw new NotImplementedException();
-    }
+    public abstract float PagarImposto(float rendimento);
+   
 }
