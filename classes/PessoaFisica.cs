@@ -16,22 +16,22 @@ public class PessoaFisica : Pessoa, IPessoaFisica
 
     public bool ValidarDataNascimento(DateTime dataNasc)
     {
-        return ValidarDataNascimento(dataNasc, false);
+        DateTime dataAtual = DateTime.Today;
+        double anos = (dataAtual - dataNasc).TotalDays /365;        
+        Console.WriteLine($"{anos}");   
+        if (anos >18)     
+        return true;
+        
+        else
+
+        return false;
+        
     }
 
-    public bool ValidarDataNascimento(DateTime dataNasc, bool v)
+    public bool ValidarDataNascimento(string dataNasc)
     {
-
-        DateTime dataAtual = DateTime.Today;
-        double anos = (dataAtual - dataNasc).TotalDays / 365;
-        if (anos >= 18)
-            return true;
-
-        else
-            return true;
-
-           
-            
-
+        throw new NotImplementedException();
     }
 }
+
+   

@@ -2,7 +2,7 @@
 
 PessoaFisica novaPf = new PessoaFisica();
 
-novaPf.nome = "Denise";
+
 // //*
 // Console.WriteLine(novaPf.nome);
 // Console.WriteLine("Nome: " + novaPf.nome); //Concatenado
@@ -10,6 +10,8 @@ novaPf.nome = "Denise";
 // */
 
 
-Console.WriteLine(novaPf.ValidarDataNascimento(new DateTime(1982,05,17)));
+
+Console.WriteLine(novaPf.ValidarDataNascimento(new DateTime(2010,01,01)));
+
 
 
