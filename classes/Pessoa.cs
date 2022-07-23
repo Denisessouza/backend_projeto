@@ -6,8 +6,8 @@ public abstract class Pessoa : IPessoa
 {
    
    public string ?nome { get; set; }
-   public string ?endereço { get; set; }
-   public string ?rendimento { get; set; }
+   public Endereco ?endereço { get; set; }
+   public float ?rendimento { get; set; }
    
    
     

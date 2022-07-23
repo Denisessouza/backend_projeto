@@ -7,7 +7,7 @@ public class PessoaFisica : Pessoa, IPessoaFisica
 {
 
     public string? cpf { get; set; }
-    public DateTime? DataNascimento { get; set; }
+    public string? DataNascimento { get; set; }
 
     public override float PagarImposto(float rendimento)
     {
@@ -19,19 +19,36 @@ public class PessoaFisica : Pessoa, IPessoaFisica
         DateTime dataAtual = DateTime.Today;
         double anos = (dataAtual - dataNasc).TotalDays /365;        
         Console.WriteLine($"{anos}");   
-        if (anos >18)     
+        if (anos >= 18)     
         return true;
-        
+
         else
 
         return false;
-        
+
     }
 
     public bool ValidarDataNascimento(string dataNasc)
     {
-        throw new NotImplementedException();
-    }
+        DateTime dataConvertida;
+        if (DateTime.TryParse (dataNasc, out dataConvertida)) {
+        Console.WriteLine($"{dataConvertida}");
 }
+        DateTime dataAtual = DateTime.Today;
+        double anos = (dataAtual - dataConvertida).TotalDays / 365;
 
-   
+        if (anos >= 18)
+            return true;
+    
+        else 
+
+        return false;
+    }
+    }
+
+      
+
+    
+
+
+
