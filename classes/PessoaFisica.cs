@@ -14,6 +14,8 @@ public class PessoaFisica : Pessoa, IPessoaFisica
         throw new NotImplementedException();
     }
 
+    
+
     public bool ValidarDataNascimento(DateTime dataNasc)
     {
         DateTime dataAtual = DateTime.Today;

@@ -68,12 +68,10 @@ do
             PessoaJuridica metodoPj = new PessoaJuridica();
             PessoaJuridica novaPj = new PessoaJuridica();
             Endereco novoEndpj = new Endereco();
-
             novaPj.nome = "HShop";
             novaPj.cnpj = "00.000.000/0001-00";
             novaPj.razaoSocial = "DC Souza Comercial";
             novaPj.rendimento = 600;
-
             novoEndpj.logradouro = "Rua: Esmeraldo Tarquinio";
             novoEndpj.numero = 184;
             novoEndpj.Complemento = "casa";
