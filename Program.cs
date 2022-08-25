@@ -35,9 +35,11 @@ do
 =================================================================================
 
 ");
-
+    
+    
     opcao = Console.ReadLine();
 
+    
     switch (opcao)
     {
         case "1":
@@ -57,8 +59,11 @@ do
             Console.WriteLine(@$"
             Nome: {novaPf.nome}
             Endereço: {novaPf.endereço.logradouro}, {novaPf.endereço.numero}
-            Maior de idade: {metodoPf.ValidarDataNascimento(novaPf.DataNascimento)}");
-            Console.WriteLine($"Digite Enter para sair");
+            Maior de idade: {metodoPf.ValidarDataNascimento(novaPf.DataNascimento)};
+            ");
+                     
+                      
+            Console.WriteLine ($"Digite Enter para continuar");
             Console.ReadLine();
 
             break;
@@ -71,7 +76,7 @@ do
             novaPj.nome = "HShop";
             novaPj.cnpj = "00.000.000/0001-00";
             novaPj.razaoSocial = "DC Souza Comercial";
-            novaPj.rendimento = 600;
+            novaPj.rendimento = 600.0f;
             novoEndpj.logradouro = "Rua: Esmeraldo Tarquinio";
             novoEndpj.numero = 184;
             novoEndpj.Complemento = "casa";
@@ -83,6 +88,7 @@ do
             Razão Social: {novaPj.razaoSocial}
             CNPJ: {novaPj.cnpj}
             CNPJ é valido: {metodoPj.ValidarCnpj(novaPj.cnpj)}");
+            
 
             Console.WriteLine($"Digite Enter para sair");
             Console.ReadLine();
