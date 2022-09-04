@@ -27,13 +27,14 @@ public class PessoaFisica : Pessoa, IPessoaFisica
         } else if (rendimento >3500 && rendimento <=6000){
             return (rendimento/100) * 3.5f;
             
-        } else (rendimento >6000){
+        } else {
             return(rendimento/100)* 5;
         }
           
     
     }    
-             
+
+       
     
 
     

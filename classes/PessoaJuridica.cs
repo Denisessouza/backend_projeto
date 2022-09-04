@@ -12,7 +12,18 @@ namespace backend_projeto.classes
 
         public override float PagarImposto(float rendimento)
         {
-            throw new NotImplementedException();
+            if (rendimento <1500)            {
+                return(rendimento/100) * 3;
+
+            } else if( rendimento >1500 && rendimento <=3500){
+                return (rendimento/100) * 5;
+
+                } else if(rendimento >3500 && rendimento <6000){
+                return(rendimento /100) * 7;
+
+            } else {
+                return (rendimento/100) * 9;
+            }   
         }
 
         public bool ValidarCnpj(string cnpj)
