@@ -13,6 +13,7 @@
 - Encontro Remoto 3 - Validação do Método de Idade - Verificar maioridade, conversão do Datetime para string. 
 - Encontro Remoto 4 - Validação do CNPJ através do uso do REGEX. 
 - Encontro Remoto 5 - Criação de Menu Pessoa Jurídica e Pessoa Física. 
+- Encontro Remoto 6 - Implementação do Método de Pagamento de Imposto para Pessoa Física e Pessoa Jurídica - Utilização do If Ternário na validação da idade e do regex do CNPJ
 
 
 ಠ‿ಠ
