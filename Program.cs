@@ -261,10 +261,10 @@ do
                         novoEndpj.Complemento = Console.ReadLine();     
 
                         novaPj.endereço= novoEndpj;
-                        listaPj.Add(listaPj);
+                        listaPj.Add(novaPj);
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.WriteLine($"Cadastro Realizado com Sucesso !!");
-                        Thread.Sleep(4000);
+                        Thread.Sleep(2000);
                         Console.ResetColor();                                         
                         
                         
