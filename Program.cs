@@ -82,57 +82,68 @@ do
                         Console.WriteLine($"Digite o nome da Pessoa Física a ser cadastrada: ");
                         novaPf.nome = Console.ReadLine();
 
-                        bool dataValida;
+                        // bool dataValida;
 
-                        do
-                        {
-                            Console.WriteLine($"Digite a data de nascimento: ");
-                            string dataNasc = Console.ReadLine();
+                        // do
+                        // {
+                        //     Console.WriteLine($"Digite a data de nascimento: ");
+                        //     string dataNasc = Console.ReadLine();
 
-                            dataValida = metodoPf.ValidarDataNascimento(dataNasc);
-                            if (dataValida)
-                            {
-                                novaPf.DataNascimento = dataNasc;
-                            }
-                            else {
-                                Console.ForegroundColor = ConsoleColor.DarkRed;
-                                Console.WriteLine($"Digite uma data de nascimento válida: ");
-                                Console.ResetColor();
+                        //     dataValida = metodoPf.ValidarDataNascimento(dataNasc);
+                        //     if (dataValida)
+                        //     {
+                        //         novaPf.DataNascimento = dataNasc;
+                        //     }
+                        //     else {
+                        //         Console.ForegroundColor = ConsoleColor.DarkRed;
+                        //         Console.WriteLine($"Digite uma data de nascimento válida: ");
+                        //         Console.ResetColor();
 
-                            }
-                        } while (dataValida == false);
+                        //     }
+                        // } while (dataValida == false);
 
 
                         Console.WriteLine($"Digite o CPF: ");
                         novaPf.cpf = Console.ReadLine();
 
-                        Console.WriteLine($"Informe o valor do seu rendimento: ");
-                        novaPf.rendimento = float.Parse(Console.ReadLine());
+                        // Console.WriteLine($"Informe o valor do seu rendimento: ");
+                        // novaPf.rendimento = float.Parse(Console.ReadLine());
 
-                        Console.WriteLine($"Informe o endereço:");
-                        novoEnd.logradouro = Console.ReadLine();
+                        // Console.WriteLine($"Informe o endereço:");
+                        // novoEnd.logradouro = Console.ReadLine();
 
-                        Console.WriteLine($"Número: ");
-                        novoEnd.numero = int.Parse(Console.ReadLine());
+                        // Console.WriteLine($"Número: ");
+                        // novoEnd.numero = int.Parse(Console.ReadLine());
 
-                        Console.WriteLine($"Complemento ou Enter caso não possua: ");
-                        novoEnd.Complemento = Console.ReadLine();
+                        // Console.WriteLine($"Complemento ou Enter caso não possua: ");
+                        // novoEnd.Complemento = Console.ReadLine();
 
-                        Console.WriteLine($"Este endereço é comercial ? S ou N ");
-                        string endCom = Console.ReadLine().ToUpper();
+                        // Console.WriteLine($"Este endereço é comercial ? S ou N ");
+                        // string endCom = Console.ReadLine().ToUpper();
 
-                        if (endCom == "S")
+                        // if (endCom == "S")
+                        // {
+                        //     novoEnd.endComercial = true;
+
+                        // }
+                        // else
+                        // {
+                        //     novoEnd.endComercial = false;
+                        // }
+
+                        // novaPf.endereço = novoEnd;
+
+                        // listaPf.Add(novaPf);
+                                                
+                        using (StreamWriter sw= new StreamWriter($"{novaPf.nome}.txt"))
                         {
-                            novoEnd.endComercial = true;
-
+                            sw.WriteLine($"{novaPf.nome}");
+                            sw.WriteLine($"{novaPf.cpf}");
+                            sw.WriteLine($"{novaPf.rendimento}");
+                            
+                            
                         }
-                        else
-                        {
-                            novoEnd.endComercial = false;
-                        }
 
-                        novaPf.endereço = novoEnd;
-                        listaPf.Add(novaPf);
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.WriteLine($"Cadastro Realizado com Sucesso !!");
                         Thread.Sleep(4000);
@@ -144,28 +155,40 @@ do
                     case "2":
 
                         Console.Clear();
-                        if(listaPf.Count > 0){
-                            foreach (PessoaFisica cadaPessoa in listaPf)
+                        // if(listaPf.Count > 0){
+                        //     foreach (PessoaFisica cadaPessoa in listaPf)
 
-                            {   
-                                Console.Clear();
-                                Console.WriteLine(@$"
-                                Nome: {cadaPessoa.nome}
-                                Endereço: {cadaPessoa.endereço.logradouro}, {cadaPessoa.endereço.numero}
-                                Data de Nascimento: {cadaPessoa.DataNascimento}
-                                Taxa de Imposto a ser paga é: {metodoPf.PagarImposto(cadaPessoa.rendimento).ToString("C")}
-                                ");      
-                            Console.WriteLine ($"Digite Enter para continuar");
-                            Console.ReadLine(); 
+                        //     {   
+                        //         Console.Clear();
+                        //         Console.WriteLine(@$"
+                        //         Nome: {cadaPessoa.nome}
+                        //         Endereço: {cadaPessoa.endereço.logradouro}, {cadaPessoa.endereço.numero}
+                        //         Data de Nascimento: {cadaPessoa.DataNascimento}
+                        //         Taxa de Imposto a ser paga é: {metodoPf.PagarImposto(cadaPessoa.rendimento).ToString("C")}
+                        //         ");      
+                        //     Console.WriteLine ($"Digite Enter para continuar");
+                        //     Console.ReadLine(); 
 
-                            }
+                        //     }
 
-                        } else {
-                            Console.WriteLine($"Lista Vazia !");
-                            Thread.Sleep(3000);
+                        // } else {
+                        //     Console.WriteLine($"Lista Vazia !");
+                        //     Thread.Sleep(3000);
                             
+                        // }
+
+                        using (StreamReader sr= new StreamReader($"Denise.txt"))
+                        {
+                            string linha;
+                            while ((linha = sr.ReadLine()) !=null) {
+
+                                Console.WriteLine($"{linha}");
+                                
+                            }
                         }
-                        
+                            Console.WriteLine($"Aperte 'Enter' para continuar");
+                            Console.ReadLine();
+                            
                             break;
 
             case "0":
