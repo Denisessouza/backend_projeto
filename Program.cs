@@ -207,7 +207,7 @@ do
 
         case "2":
 
-            List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
+            // List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
                        
             PessoaJuridica metodoPj = new PessoaJuridica();
 
@@ -243,6 +243,10 @@ do
                         PessoaJuridica novaPj = new PessoaJuridica();
                         Endereco novoEndpj = new Endereco();
 
+                        metodoPj.Inserir(novaPj); // Metodo gravar CSV
+                        
+
+
                         Console.WriteLine($"Digite o nome da Pessoa Jurídica a ser cadastrada: ");
                         novaPj.nome = Console.ReadLine();
 
@@ -271,20 +275,28 @@ do
                         Console.WriteLine($"Digite a Razão Social ");
                         novaPj.razaoSocial = Console.ReadLine();
                                                 
-                        Console.WriteLine($"Informe o valor do seu rendimento: ");
-                        novaPj.rendimento = float.Parse(Console.ReadLine());
+                        // Console.WriteLine($"Informe o valor do seu rendimento: ");
+                        // novaPj.rendimento = float.Parse(Console.ReadLine());
 
-                        Console.WriteLine($"Informe o endereço:");
-                        novoEndpj.logradouro = Console.ReadLine();
+                        // Console.WriteLine($"Informe o endereço:");
+                        // novoEndpj.logradouro = Console.ReadLine();
 
-                        Console.WriteLine($"Número: ");
-                        novoEndpj.numero = int.Parse(Console.ReadLine());
+                        // Console.WriteLine($"Número: ");
+                        // novoEndpj.numero = int.Parse(Console.ReadLine());
 
-                        Console.WriteLine($"Complemento ou Enter caso não possua: ");
-                        novoEndpj.Complemento = Console.ReadLine();     
+                        // Console.WriteLine($"Complemento ou Enter caso não possua: ");
+                        // novoEndpj.Complemento = Console.ReadLine();     
 
-                        novaPj.endereço= novoEndpj;
-                        listaPj.Add(novaPj);
+                        // novaPj.endereço= novoEndpj;
+                        // // listaPj.Add(novaPj);
+
+                        // using (StreamWriter pjsw= new StreamWriter($"{novaPj.nome}.txt"))
+                        // {
+                        //     pjsw.WriteLine(novaPj.nome);
+                        //     pjsw.WriteLine(novaPj.razaoSocial);
+
+                        // }
+                                                                       
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.WriteLine($"Cadastro Realizado com Sucesso !!");
                         Thread.Sleep(2000);
@@ -298,33 +310,66 @@ do
                     case "2":
                     
 
-                        Console.Clear();
-                        if(listaPj.Count > 0){
-                            foreach (PessoaJuridica cadaPessoapj in listaPj)
+                      
 
-                            {                              
-                                Console.WriteLine($@"
-                                 Nome: {cadaPessoapj.nome}
-                                 Razão Social: {cadaPessoapj.razaoSocial}
-                                 CNPJ: {cadaPessoapj.cnpj}
-                                 O valor do imposto é: {metodoPj.PagarImposto(cadaPessoapj.rendimento).ToString("C")}
-            ");
+                 List<PessoaJuridica> ListaPj = metodoPj.Ler();
+
+                 foreach (PessoaJuridica cadaitem in ListaPj)
+                 {
+                    Console.Clear();
+                    Console.WriteLine($@"
+                                Nome: {cadaitem.nome}
+                                Razão Social: {cadaitem.razaoSocial}
+                                CNPJ: {cadaitem.cnpj}
+                                
+                    ");
+                 }
+
+                 
+
+             //             if(listaPj.Count > 0){
+            //                 foreach (PessoaJuridica cadaPessoapj in listaPj)
+
+            //                 {                              
+            //                     Console.WriteLine($@"
+            //                      Nome: {cadaPessoapj.nome}
+            //                      Razão Social: {cadaPessoapj.razaoSocial}
+            //                      CNPJ: {cadaPessoapj.cnpj}
+            //                      O valor do imposto é: {metodoPj.PagarImposto(cadaPessoapj.rendimento).ToString("C")}
+            // ");
 
 
-            Console.WriteLine($"Digite Enter para sair");
-            Console.ReadLine();
 
-                            }
+                           
 
-                        } else {
-                            Console.WriteLine($"Lista Vazia !");
-                            Thread.Sleep(3000);
+                    Console.WriteLine($"Digite Enter para sair");
+                    Console.ReadLine();
+
+                    //         }
+
+                    //     } else {
+                    //         Console.WriteLine($"Lista Vazia !");
+                    //         Thread.Sleep(3000);
                             
-                        }
-                        
+                    //     }
+
+                    //         using (StreamReader pjsr= new StreamReader($"loja.txt"))
+                    //         {
+                    //             string linha2;
+                    //             while ((linha2 = pjsr.ReadLine()) !=null) {
+
+                    //             Console.WriteLine($"{linha2}");
+                    //             Console.ReadLine();
+                                    
+                    //             }
+                    //         }      
+
+                             
+
                             break;
 
-            case "0":
+
+                case "0":
                         break;
 
                     default:
@@ -358,14 +403,14 @@ do
 static void BarraCarregamento(string texto, int tempo)
 {
     Console.BackgroundColor = ConsoleColor.Yellow;
-    Console.ForegroundColor = ConsoleColor.DarkBlue;
+    Console.ForegroundColor = ConsoleColor.DarkRed;
 
     Console.Write($"{texto}");
 
-    for (var contador = 0; contador < 35; contador++)
+    for (var contador = 0; contador < 24; contador++)
     {
-        Console.Write(". ");
-        Thread.Sleep(250);
+        Console.Write(" ♥ ");
+        Thread.Sleep(200);
     }
 
     Console.ResetColor();

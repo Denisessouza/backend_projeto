@@ -10,6 +10,8 @@ namespace backend_projeto.classes
         
         public string ?razaoSocial { get; set; }
 
+        public string caminho { get; private set; } = "Database/PessoaJuridica.csv";
+
         public override float PagarImposto(float rendimento)
         {
             if (rendimento <1500)            {
@@ -41,9 +43,48 @@ namespace backend_projeto.classes
                         }
                     return true;
                 }
-                else {
-                    return false;
+                
+                return false;
                 }
+                
+                    public void Inserir(PessoaJuridica pj)
+                    //metodo de inserir dados - RECEBE UM OBJETO
+                {
+                    VerificarpastaArquivo(caminho);   
+                    //Método evocado para que ele antes de tudo, verifique o caminho                 
+                    string[] pjString = {$"{pj.nome}, {pj.cnpj}, {pj.razaoSocial}"};
+                    //Conversão de String para Array - Método que recebe um Array de strings
+                    File.AppendAllLines(caminho, pjString);
+                    //Acessar e escrever dentro do arquivo
+               }
+                
+                public List<PessoaJuridica> Ler() {
+
+                    List<PessoaJuridica> listaPj = new List <PessoaJuridica>();
+                    //CRIAMOS UMA NOVA LISTA DE PESSOA JURÍDICA
+                    string[] linhas = File.ReadAllLines(caminho); 
+                    //Leitura do Array de strings
+                    foreach(string cadaLinha in linhas) {
+                    // FOREACH: leitor de strings e arrays - cada vez que ele lê, armazena na variavel cadaLinha
+                    string[] atributos = cadaLinha.Split(",");
+                    // atributos é o nome da Array. Agora ele divide, quebra, nas VÍRGULAS.
+
+                    PessoaJuridica cadaPj = new PessoaJuridica();
+                    //Criou-se um novo objeto
+
+                    cadaPj.nome = atributos[0];
+                    cadaPj.cnpj = atributos[1];
+                    cadaPj.razaoSocial = atributos[2];
+                    //Chamamos o objeto e indicamos a posição no Array atributos
+
+                    listaPj.Add(cadaPj); //Adicionamos a Lista 
+
+                    }
+
+                    return listaPj;  //O sistema estava dando erro pq precisava do Retorno
+                } 
+
+                    
+
         }
     }
-}
