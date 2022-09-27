@@ -15,6 +15,7 @@
 - Encontro Remoto 5 - Criação de Menu Pessoa Jurídica e Pessoa Física. 
 - Encontro Remoto 6 - Implementação do Método de Pagamento de Imposto para Pessoa Física e Pessoa Jurídica - Utilização do If Ternário na validação da idade e do regex do CNPJ
 - Encontro Remoto 7 - Implementação de submenu para cadastro de Pesso Física e Jurídica - gravação de dados em Lista.
+- Encontro Remoto 8 - Gravação de Arquivos em .TXT e CSV
 
 
 ಠ‿ಠ
