@@ -1,12 +1,13 @@
-# Módulo Back-end #
+# Sistema de Cadastro de Pessoa Física e Pessoa Jurídica  #
+
+* Projeto do Módulo Back-end do Curso FullStack SENAI - Unidade Currícular 12 <br><br>
+O sistema cadastra, consulta, grava em arquivo tipo .txt ou CSV.<br>
+Campos de entrada e consulta de Pessoa Física (validando data de nascimento - cadastro permitido apenas para maiores de 18 anos, validação de CPF - cadastro apenas se digitado de maneira correta)<br>
+Campos de entrada e consulta de Pessoa Jurídica (Validação do CNPJ via REGEX) e para ambos os casos, implementação de métodos de pagamento de Impostos de acordo com tabelas correspondentes a modalidade.
 
 
-
-*Projeto do Módulo Back-end do Curso FullStack SENAI <br>**
-*Profº Luiz Lozano* 
-
-
-**Programação Orientada a Objeto com C#**
+# Organização do Projeto #
+*Projeto desenvolvido em aulas ao vivo, divididas em:*
 
 - Encontro Remoto 1 - Criação do repositório para estudos de Backend
 - Encontro Remoto 2 - Criação das Classes de Pessoa,  Pessoa Física e Pessoa Jurídica e suas Interfaces.
@@ -18,5 +19,32 @@
 - Encontro Remoto 8 - Gravação de Arquivos em .TXT e CSV
 
 
-ಠ‿ಠ
+# Features #
+Cadastro<br>
+Consulta<br> 
+Gravação<br>
+Validações
+
+# Pré- Requisitos de Instalação # 
+
+SO mais recente: Verifique se você tem a versão mais recente, Windows 7 SP1 ou Windows 8.1 Update.<br>
+Processador: 1 gigahertz (GHz) ou um processador mais rápido, ou SoC.<br>
+RAM: 1 GB para 32 bits ou de 2 GB para 64 bits.
+
+# Tecnologias #
+
+.NET <br>
+Linguagem C#
+
+# Execução da Aplicação #
+Sistema Operacional Windows
+
+# Erros Comuns #
+Sobrecarga de consultas.
+
+# Contribuídores # 
+
+Denise Souza <br>
+Professor Luiz Carlos Machi Lozano 
+
     
